@@ -38,6 +38,7 @@ cnpm install
 python spider.py num
 ```
 其中num为页的数目，每页有60张图片；运行之后输入图片的关键字（例如“APP背景图”）在百度图片中下载60*num张图片，保存在根目录的pics/文件夹中
+
 3.在根目录下运行以下命令开启SPA web应用
 ```shell
 cnpm start
