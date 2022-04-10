@@ -1,0 +1,56 @@
+{
+  "name": "@alifd/scaffold-lite-js",
+  "version": "0.1.0",
+  "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
+  "dependencies": {
+    "@alifd/next": "^1.25.19",
+    "@alifd/theme-1": "^0.4.2",
+    "@alifd/theme-3": "^0.5.3",
+    "@alifd/theme-4": "^0.4.3",
+    "@alifd/theme-design-pro": "0.x",
+    "jquery": "^3.6.0",
+    "lib-flexible": "^0.3.2",
+    "moment": "^2.24.0",
+    "node-sass": "^7.0.1",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^6.0.0",
+    "prop-types": "^15.5.8",
+    "puppeteer": "^13.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-html5video": "^2.5.1",
+    "react-video": "^1.5.3",
+    "redlock": "^v5.0.0-beta.2",
+    "video-react": "^0.15.0",
+    "webpack": "^5.69.1"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "build-plugin-fusion": "^0.1.22",
+    "build-plugin-ignore-style": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^7.30.0",
+    "ice.js": "^2.0.0",
+    "node-sass": "^7.0.1",
+    "puppeteer": "^13.4.0",
+    "sass-loader": "^12.6.0",
+    "stylelint": "^13.2.0",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "scripts": {
+    "start": "set BROWSER=Chrome&&icejs start",
+    "build": "icejs build",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-lite-js"
+  },
+  "private": true,
+  "originTemplate": "@alifd/scaffold-lite-js"
+}

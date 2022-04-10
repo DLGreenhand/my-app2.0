@@ -1,0 +1,16 @@
+.grid_fixed_demo_title {
+    word-wrap:break-word;  
+    word-break:break-all;  
+}
+.next_row {
+    margin: 10px;
+}
+
+.next_col {
+    border:1px solid rgb(230, 227, 227);
+    border-radius: 3px;
+    background-color:#b9a9a9;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
