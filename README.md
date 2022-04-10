@@ -23,37 +23,6 @@
 ├── package.json
 └── tsconfig.json
 ```
-2.业务组件表
-```plain
-btn按钮
-divider分隔符
-Grid栅格
-Icon图标
-Menubtn菜单按钮
-Text(Paragraph)文本
-SplitBtn分隔按钮
-Breadcrumb面包屑
-Pagination分页器
-Step步骤
-Tab选项卡
-Checkbox复选按钮
-Input输入框
-NumPicker数字输入框
-Radio单选框
-Rating评分
-Search搜索
-Switch开关
-Transfer穿梭框
-Upload上传组件
-Avatar头像框
-Bagde徽标
-Card卡片
-Collapse折叠框
-List列表
-Menu菜单
-Progress进度指示器
-```
-
 
 ## 环境
 1.在VSCode中安装icework插件，并以文件夹的方式打开根目录
@@ -64,8 +33,13 @@ Progress进度指示器
 ```shell
 cnpm install
 ```
-2.在根目录下运行以下命令开启SPA web应用
+*2.在根目录下运行以下命令爬取随机背景图片（app2.0更新）
+```shell
+python spider.py num
+```
+其中num为页的数目，每页有60张图片；运行之后输入图片的关键字（例如“APP背景图”）在百度图片中下载60*num张图片，保存在根目录的pics/文件夹中
+3.在根目录下运行以下命令开启SPA web应用
 ```shell
 cnpm start
 ```
-3.在浏览器页面刷新一次可生成新的组件
+4.在浏览器页面刷新一次可生成新的组件
