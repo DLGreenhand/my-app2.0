@@ -3,11 +3,28 @@ import Text from '@/components/Text';
 import Icon from '@/components/Icon';
 import Navi from '@/FuncBlock/Navi';
 import randomColor from '@/components/Zgen/genColor';
+import { level } from '@/level';
+import randomPic from '@/components/Zgen/genPic';
+import randomBG from '@/components/Zgen/genBG';
 
 function PersonalLayout({ children }) {
   const arrColor = randomColor(3);
+  let backGround;
+  if (level >= 4) {
+    backGround = randomBG();
+  }
   return (
-    <div style={{ width: '390px', height: '844px', display: 'block' }}>
+    <div
+      id="components"
+      style={{
+        width: '390px',
+        height: '844px',
+        display: 'block',
+        backgroundImage: `url(${backGround})`,
+        backgroundSize: 'cover',
+        overflow: 'hidden',
+      }}
+    >
       <div
         style={{
           backgroundColor: arrColor[0],

@@ -1,5 +1,5 @@
 import { lazy } from 'ice';
-import BasicLayout from '@/layouts/BasicLayout';
+import { level } from './level';
 import PosterLayout from './layouts/PosterLayout';
 import 'lib-flexible';
 import CommonLayout from './layouts/CommonLayout';
@@ -11,18 +11,44 @@ const PosterPage = lazy(() => import('@/pages/PosterPage'));
 const CommonPage = lazy(() => import('@/pages/CommonPage'));
 const PersonalPage = lazy(() => import('@/pages/PersonalPage'));
 const LivePage = lazy(() => import('@/pages/LivePage'));
-const layouts = [PosterLayout, CommonLayout, PersonalLayout, LiveLayout];
-const pages = [PosterPage, CommonPage, PersonalPage, LivePage];
-const page_num = Math.floor(Math.random() * 4);
+const layouts = [
+  PosterLayout,
+  CommonLayout,
+  PersonalLayout,
+  LiveLayout,
+];
+
+
 // const page_num = 0;
+const pages = [PosterPage, CommonPage, PersonalPage, LivePage];
+let page_num;
+const decision = Math.random();
+if (decision < 0.05) {
+  page_num = 2;
+} else if (decision < 0.1) {
+  page_num = 3;
+} else if (decision < 0.15) {
+  page_num = 0;
+} else {
+  page_num = 1;
+}
+let level_page;
+let level_layout;
+if (level <= 1) {
+  level_page = Dashboard;
+} else {
+  level_page = pages[page_num];
+  level_layout = layouts[page_num];
+}
+
 const routerConfig = [
   {
     path: '/',
-    component: layouts[page_num], // Layout
+    component: level_layout, // Layout
     children: [
       {
         path: '/',
-        component: pages[page_num], // page
+        component: level_page, // page
       },
     ],
   },

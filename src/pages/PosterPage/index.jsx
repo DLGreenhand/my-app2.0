@@ -4,6 +4,8 @@ import Text from '@/components/Text';
 import randomSelect from '@/components/Zgen/genSelect';
 import Button from '@/components/Button';
 import randomColor from '@/components/Zgen/genColor';
+import randomNum from '@/components/Zgen/genNum';
+import Input from '@/components/Input';
 const flexDirection = randomSelect(['row', 'row-reverse']);
 
 const selects = [
@@ -24,7 +26,21 @@ const selects = [
       flexDirection,
     }}
   >
-    <Button />
+    <Button width="100%" />
+  </div>,
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      flexDirection,
+    }}
+  >
+    <Button width="50%" />
+  </div>,
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Text textLen={randomNum(5, 15)} FontSize="35px" />
+    <Input />
+    <Input />
   </div>,
 ];
 
@@ -34,7 +50,7 @@ export default function PosterPage() {
       <div
         style={{
           position: 'relative',
-          marginTop: '400px',
+          marginTop: `${Math.floor(Math.random() * 400)}px`,
         }}
       >
         {randomSelect(selects)}
@@ -42,7 +58,7 @@ export default function PosterPage() {
       <div
         style={{
           position: 'relative',
-          marginTop: '200px',
+          marginTop: `${Math.floor(Math.random() * 400)}px`,
         }}
       >
         {randomSelect(selects)}

@@ -3,6 +3,8 @@ import * as React from 'react';
 
 export default function Random() {
   return (
-    <Components />
+    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+      <Components />
+    </div>
   );
 }

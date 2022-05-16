@@ -28,7 +28,7 @@ export default function Range() {
     <Rng
       className="component"
       id="Range"
-      style={{ display: 'inline-block', margin: 8, minWidth: 200, minHeight: 24 }}
+      style={{ display: 'inline-block', margin: 8, minHeight: 24, maxWidth: `${randomNum(200, 370)}px` }}
       slider={slider}
       mark={mark}
       defaultValue={value}

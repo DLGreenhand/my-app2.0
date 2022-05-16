@@ -39,9 +39,9 @@ export default function AppHead() {
         flexDirection: 'row',
         height: '50px',
         backgroundColor: arrColor[0],
-        position: 'fixed',
-        top: '0px',
-        left: '0px',
+        // position: 'fixed',
+        // top: '0px',
+        // left: '0px',
       }}
     >
       <Icon size={'xl'} color={arrColor[1]} />

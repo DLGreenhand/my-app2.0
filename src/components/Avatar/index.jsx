@@ -11,6 +11,7 @@ import randomColor from '../Zgen/genColor';
 import randomSelect from '../Zgen/genSelect';
 import randomBool from '../Zgen/genBool';
 import Text from '../Text';
+import randomIconPic from '../Zgen/genIconPic';
 
 export default function Avatar() {
   const arrColor = randomColor(1);
@@ -26,7 +27,7 @@ export default function Avatar() {
     </Avt>,
     <Avt
       shape="circle"
-      src={randomPic()}
+      src={randomIconPic()}
       style={{ color: arrColor[1], backgroundColor: arrColor[0] }}
       size={randomSize()}
     />,

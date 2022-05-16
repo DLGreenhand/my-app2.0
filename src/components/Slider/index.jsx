@@ -31,16 +31,18 @@ export default function Slider() {
 
   return (
     <Sld
+      // style={{ maxHeight: '200px' }}
       title={textArr(text)}
       id="Slider"
       className="component"
       arrows={false}
       centerMode={randomBool()}
+      // variableWidth
     >
       {items.map((item, index) => (
-        <div key={index}>
-          <img src={randomPic()} style={{ width: '100%' }} alt={item.text} />
-        </div>
+        // <div key={index}>
+        <img src={randomPic()} style={{ maxHeight: '200px' }} alt={item.text} />
+        // </div>
       ))}
     </Sld>
   );

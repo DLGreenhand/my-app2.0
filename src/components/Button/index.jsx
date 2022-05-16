@@ -5,7 +5,7 @@ import randomString from '../Zgen/genText';
 import randomIcon from '../Zgen/genIcon';
 import randomSelect from '../Zgen/genSelect';
 
-export default function Button() {
+export default function Button(props) {
   const haveIcon = Math.random();
   let BtnIcon = [];
   if (haveIcon > 0.5) {
@@ -14,13 +14,18 @@ export default function Button() {
 
   const text = randomString(4);
   const Btns = ['primary', 'secondary', 'normal'];
-  const sizes = ['large', 'medium', 'small'];
+  const sizes = ['large', 'medium', 'small', 'xl', 'xxl'];
   const size = randomSelect(sizes);
   const BtnType = randomSelect(Btns);
   return (
-    <div className="component" id="Button" style={{ display: 'inline-block', margin: 8 }} title={text}>
+    <div
+      className="component"
+      id="Button"
+      style={{ display: 'inline-block', margin: 8, width: props.width }}
+      title={text}
+    >
       <Box direction="row">
-        <Btn type={BtnType} size={size}>
+        <Btn type={BtnType} size={size} style={{ width: '100%' }}>
           {BtnIcon}
           {text}
         </Btn>
@@ -28,3 +33,6 @@ export default function Button() {
     </div>
   );
 }
+Button.defaultProps = {
+  width: 'auto',
+};

@@ -10,7 +10,10 @@ export default function Navi(props) {
   const Group_num = Math.random() * 5 + 1;
   const BtnGroups = [];
   const arrColor = randomColor(2 * Group_num);
-  let BGC = arrColor[0];
+  let BGC;
+  if (num === 1) {
+    BGC = arrColor[0];
+  }
   for (let i = 0; i < Group_num; i++) {
     BtnGroups.push(<BtnGroup size={size} textColor={arrColor[2 * i + 1]} iconColor={arrColor[2 * i + 2]} />);
   }
@@ -21,13 +24,13 @@ export default function Navi(props) {
     selected = <Tab />;
     pos = 'static';
   }
-  if (inCard == 1) {
+  if (inCard === 1) {
     BGC = '0';
   }
   return (
     <div
-      className="component"
-      id="Navi"
+      // className="component"
+      // id="Navi"
       style={{
         display: 'flex',
         justifyContent: 'space-around',
@@ -37,7 +40,6 @@ export default function Navi(props) {
         width: '100%',
         maxWidth: '390px',
         backgroundColor: BGC,
-        zIndex: '9999',
       }}
     >
       {selected}

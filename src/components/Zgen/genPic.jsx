@@ -8,11 +8,11 @@ function load(name) {
   return xhr.status === okStatus ? xhr.responseText : null;
 }
 
-const text = load('../../../fn.txt');
+const text = load('../../../fn_norm.txt');
 
-const root_dir = '../../../pics/';
+const root_dir = '../../../norm_pics/';
 
 export default function randomPic() {
-  const pic_num = Math.floor(Math.random() * parseInt(text, 10) + 1);
+  const pic_num = Math.floor(Math.random() * parseInt(text, 10));
   return `${root_dir}${pic_num}.jpg`;
 }

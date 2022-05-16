@@ -11,9 +11,7 @@ export default function Radio() {
   const text = randomString(6);
   return (
     <div className="component" id="Radio" style={{ display: 'inline-block', margin: 8 }} title={text}>
-      <Rdo defaultChecked={randomBool()} disabled={randomBool()}>
-        {text}
-      </Rdo>
+      <Rdo defaultChecked={randomBool()} disabled={randomBool()} />
     </div>
   );
 }

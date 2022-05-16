@@ -11,9 +11,7 @@ export default function CheckBox() {
   const text = randomString(6);
   return (
     <div className="component" id="CheckBox" style={{ display: 'inline-block', margin: 8 }} title={text}>
-      <Checkbox checked={randomBool()} disabled={randomBool()}>
-        {text}
-      </Checkbox>
+      <Checkbox checked={randomBool()} disabled={randomBool()} />
       <br />
     </div>
   );

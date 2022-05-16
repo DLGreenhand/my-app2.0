@@ -7,8 +7,8 @@ import CardGroup from '@/FuncBlock/CardGroup';
 import Across from '@/FuncBlock/Across';
 import randomArr from '@/components/Zgen/genArr';
 
-const selects = [<Navi num={1} />, <CardGroup />, <Across />];
-const children = randomArr(selects, Math.random() * 3 + 3);
+const selects = [<Navi />, <CardGroup />, <Across />];
+const children = randomArr(selects, Math.random() * 3 + 7);
 function PersonalPage() {
   return <div style={{ display: 'block' }}>{children}</div>;
 }
