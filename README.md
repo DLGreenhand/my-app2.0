@@ -35,9 +35,9 @@ cnpm install
 ```
 *2.在根目录下运行以下命令爬取随机背景图片（app2.0更新）
 ```shell
-python spider.py num
+python spider.py norm|bg|icon num
 ```
-其中num为页的数目，每页有60张图片；运行之后输入图片的关键字（例如“APP背景图”）在百度图片中下载60*num张图片，保存在根目录的pics/文件夹中
+其中num为页的数目，每页有60张图片；运行之后输入图片的关键字（例如“APP背景图”）在百度图片中下载60*num张图片;norm,bg,icon分别表示一般图片、背景图片、icon图标，分别保存在根目录的norm_pics/、bg_pics/、icon_pics/文件夹中
 
 3.在根目录下运行以下命令开启SPA web应用
 ```shell
