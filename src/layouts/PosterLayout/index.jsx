@@ -2,9 +2,10 @@ import randomBG from '@/components/Zgen/genBG';
 import randomPic from '@/components/Zgen/genPic';
 import React from 'react';
 
-function Poster({ children }) {
+function PosterLayout({ children }) {
   return (
     <div
+      className="components"
       id="components"
       style={{
         position: 'fixed',
@@ -20,4 +21,4 @@ function Poster({ children }) {
   );
 }
 
-export default Poster;
+export default PosterLayout;

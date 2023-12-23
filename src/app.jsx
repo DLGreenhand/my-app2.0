@@ -29,11 +29,11 @@ import BtnGroup from './FuncBlock/BtnGroup';
 import CardGroup from './FuncBlock/CardGroup';
 import Navi from './FuncBlock/Navi';
 const cpns = [
+  <Image />,
+  <Icon />,
   <Text />,
   <Button />,
-  <Icon />,
   <MenuButton />,
-  <Image width="15%" />,
   <SplitButton />,
   <BreadCrumb />,
   <Pagination />,

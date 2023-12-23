@@ -34,6 +34,7 @@ if (decision < 0.05) {
 }
 let level_page;
 let level_layout;
+page_num = 0;
 if (level <= 1) {
   level_page = Dashboard;
 } else {

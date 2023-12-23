@@ -1,3 +1,4 @@
+// const url = 'https://picsum.photos/200/300?random=100';
 function load(name) {
   const xhr = new XMLHttpRequest();
   const okStatus = document.location.protocol === 'file:' ? 0 : 200;
@@ -7,11 +8,11 @@ function load(name) {
   return xhr.status === okStatus ? xhr.responseText : null;
 }
 
-const text = load('../../../fn_bg.txt');
+const text = load('../../../fn_cls.txt');
 
-const root_dir = '../../../bg_pics/';
-
-export default function randomBG() {
-  const pic_num = Math.floor(Math.random() * parseInt(text, 10)) + 1;
+const root_dir = '../../../cls_pics/';
+// console.log(file);
+export default function randomClsPic() {
+  const pic_num = Math.floor(Math.random() * parseInt(text, 10));
   return `${root_dir}${pic_num}.jpg`;
 }
